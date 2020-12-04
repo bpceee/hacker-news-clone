@@ -1,1 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
+
+a:link    { color:#000000; text-decoration:none; }
+a:visited { color:#828282; text-decoration:none; }

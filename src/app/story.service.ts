@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 
+import {Item} from './types/item'
+
 @Injectable({
   providedIn: 'root'
 })
@@ -10,5 +12,12 @@ export class StoryService {
 
   getNewStories() {
     return this.http.get(` https://hacker-news.firebaseio.com/v0/topstories.json`);
+  }
+
+  getItem(id: string) {
+    console.log('getItem');
+    console.log(`https://hacker-news.firebaseio.com/v0/item/${id}.json`);
+    
+    return this.http.get<Item>(`https://hacker-news.firebaseio.com/v0/item/${id}.json`);
   }
 }
