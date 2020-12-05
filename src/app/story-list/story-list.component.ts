@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from "@angular/router";
+import { Observable } from 'rxjs';
+import {mergeMap} from 'rxjs/operators'
+
 import { StoryService } from "../story.service";
 
 @Component({
@@ -7,14 +11,17 @@ import { StoryService } from "../story.service";
   styleUrls: ['./story-list.component.css']
 })
 export class StoryListComponent implements OnInit {
-  stories
+  storyIds: Observable<string[]>
 
   constructor(
+    private route: ActivatedRoute,
     private storyService: StoryService,
   ) { }
 
   ngOnInit(): void {
-    this.stories = this.storyService.getNewStories();
+    this.storyIds = this.route.data.pipe(
+      mergeMap(data => this.storyService.getStoryIds(data.type)
+    ))
   }
 
 }

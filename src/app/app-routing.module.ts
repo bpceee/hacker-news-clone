@@ -4,8 +4,9 @@ import {StoryListComponent} from './story-list/story-list.component'
 import {StoryItemComponent} from './story-item/story-item.component'
 
 const routes: Routes = [
-  { path: '', component: StoryListComponent },
-  { path: 'item', component: StoryItemComponent }
+  { path: '', component: StoryListComponent, data: {type: 'new'} },     // latest
+  { path: 'top', component: StoryListComponent, data: {type: 'top'} },  // top
+  { path: 'best', component: StoryListComponent, data: {type: 'best'} }, // best
 ];
 
 @NgModule({

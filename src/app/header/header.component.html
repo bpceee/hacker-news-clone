@@ -1,9 +1,9 @@
 <header class="header">
-  <a class="logo" [routerLink]="['/']">
-    <img src="assets/y18.gif" style="border:1px white solid;">
+  <a class="logo" [routerLink]="['/']" routerLinkActive="active">
+    <img src="assets/y18.gif" class="logo-img">
   </a>
-  <a class="hnname" [routerLink]="['/news']">Hacker News</a>
-  <a [routerLink]="['/newest']">new</a>
+  <a class="home" [routerLink]="['/']" routerLinkActive="active">Hacker News</a>
+  <a class="nav" [routerLink]="['/top']" routerLinkActive="active">new</a>
   <span class="separator">|</span> 
-  <a [routerLink]="['/news']">front</a>
+  <a class="nav" [routerLink]="['/best']" routerLinkActive="active">past</a>
 </header>

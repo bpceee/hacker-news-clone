@@ -9,11 +9,21 @@
   width: 20px;
   height: 20px;
 }
-.hnname {
+.logo-img {
+  border:1px white solid;
+}
+.home {
   margin-left: 5px;
   margin-right: 10px;
   font-weight: bold;
 }
 .separator {
   padding: 0 5px;
+}
+a {
+  text-decoration:none; 
+  color:#000000;
+}
+.nav.active {
+  color: #fff;
 }

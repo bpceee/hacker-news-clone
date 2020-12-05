@@ -10,14 +10,12 @@ import {Item} from '../types/item';
 })
 export class StoryListItemComponent implements OnInit {
   @Input() id: string;
-  story: Item;
+  story$: Observable<Item>;
 
   constructor(private storyService: StoryService,) { }
 
   ngOnInit(): void {
-    this.storyService.getItem(this.id).subscribe((data)=>{
-      this.story = data
-    })
+    this.story$ = this.storyService.getItem(this.id);
   }
 
 }
