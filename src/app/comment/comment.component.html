@@ -1,10 +1,17 @@
-<li class="container">
-  <div class="comhead">{{item?.by}} {{item?.time}}</div>
-    <span class="commtext" [innerHtml]="item?.text"></span>
-    <div>
-      <a class="reply">reply</a>
+<ng-container class="container" *ngIf="item$ | async as item">
+  <li class="container">
+    <div class="comhead">
+      <span>{{item.by}} {{item.time}}</span>
+      <button class="toggle-btn" (click)="onClickToggleFold()">{{toggleButtonText}}</button>
     </div>
-</li>
-<ul>
-  <app-comment *ngFor="let commentId of item?.kids" [id]="commentId"></app-comment>
-</ul>
+    <ng-container *ngIf="!isFolded">
+      <span class="commtext" [innerHtml]="item.text"></span>
+      <div>
+        <a class="reply">reply</a>
+      </div>
+    </ng-container>
+  </li>
+  <ul [hidden]="isFolded">
+    <app-comment *ngFor="let commentId of item.kids" [id]="commentId"></app-comment>
+  </ul>
+</ng-container>

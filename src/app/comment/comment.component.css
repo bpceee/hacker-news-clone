@@ -16,3 +16,10 @@
   font-size: x-small;
   text-decoration: underline;
 }
+
+.toggle-btn {
+  border: none;
+  font-size: 8pt;
+  color: #828282;
+  background: transparent;
+}

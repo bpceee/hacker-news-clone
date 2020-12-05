@@ -9,7 +9,7 @@ import {Item} from '../types/item';
   styleUrls: ['./story-list-item.component.css']
 })
 export class StoryListItemComponent implements OnInit {
-  @Input() id: string;
+  @Input() id: number;
   item$: Observable<Item>;
 
   constructor(private storyService: StoryService,) { }

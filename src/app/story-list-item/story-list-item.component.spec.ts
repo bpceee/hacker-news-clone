@@ -1,14 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientModule } from '@angular/common/http';
 
 import { StoryListItemComponent } from './story-list-item.component';
 
-describe('StoryItemComponent', () => {
+describe('StoryListItemComponent', () => {
   let component: StoryListItemComponent;
   let fixture: ComponentFixture<StoryListItemComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StoryListItemComponent ]
+      declarations: [ StoryListItemComponent ],
+      imports: [ 
+        HttpClientModule, 
+      ]
     })
     .compileComponents();
   });

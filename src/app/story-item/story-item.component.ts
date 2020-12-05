@@ -20,7 +20,7 @@ export class StoryItemComponent implements OnInit {
 
   ngOnInit(): void {
     this.item$ = this.route.queryParamMap.pipe(
-      mergeMap(params => this.storyService.getItem(params.get("id"))
+      mergeMap(params => this.storyService.getItem(+params.get("id"))
     ))
   }
 }

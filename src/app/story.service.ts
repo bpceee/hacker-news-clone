@@ -15,7 +15,7 @@ export class StoryService {
     return this.http.get(`https://hacker-news.firebaseio.com/v0/${type}stories.json`) as Observable<string[]>;
   }
 
-  getItem(id: string) {
+  getItem(id: number) {
     return this.http.get<Item>(`https://hacker-news.firebaseio.com/v0/item/${id}.json`) as Observable<Item>;
   }
 }
