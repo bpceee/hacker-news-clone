@@ -1,3 +1,4 @@
+// From https://github.com/HackerNews/API#items
 export type Item = {
   id: string//	The item's unique id.
   deleted: boolean//	true if the item is deleted.

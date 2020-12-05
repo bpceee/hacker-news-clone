@@ -1,6 +1,9 @@
-<!-- TODO: paging -->
-<ul>
-  <li *ngFor="let storyId of storyIds | async | slice:0:4"> 
-    <app-story-list-item [id]="storyId"></app-story-list-item>
-  </li>
-</ul>
+<ol [start]="[startIdx+1]">
+  <app-story-list-item 
+    *ngFor="let storyId of storyIds$ | async | slice:[startIdx]:[endIdx]; let i = index" 
+    [id]="storyId"
+  >
+  </app-story-list-item>
+</ol>
+
+<a class="more" [routerLink]="['./']" [queryParams]="{p: curPage+1}">More</a>

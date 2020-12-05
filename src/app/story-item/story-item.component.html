@@ -1,13 +1,15 @@
-<a [href]="story?.url">{{story?.title}}</a>
-<div>
-  <span>{{story?.score}} by {{story?.by}} {{story?.time}} | </span>
-  <a [routerLink]="['/item']" [queryParams]="{id: story?.id}">{{story?.descendants}} comments</a>
-</div>
-
-<textarea name="text" rows="6" cols="60"></textarea>
-<br>
-<input type="submit" value="add comment">
-
-<ul>
-  <app-comment *ngFor="let commentId of story?.kids" [id]="commentId"></app-comment>
-</ul>
+<ng-container *ngIf="item$ | async as item">
+  <a [href]="item.url">{{item.title}}</a>
+  <div>
+    <span>{{item.score}} by {{item.by}} {{item.time}} | </span>
+    <a [routerLink]="['/item']" [queryParams]="{id: item.id}">{{item.descendants}} comments</a>
+  </div>
+  
+  <textarea name="text" rows="6" cols="60"></textarea>
+  <br>
+  <input type="submit" value="add comment">
+  
+  <ul>
+    <app-comment *ngFor="let commentId of item.kids" [id]="commentId"></app-comment>
+  </ul>
+</ng-container>

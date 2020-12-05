@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: '', component: StoryListComponent, data: {type: 'new'} },     // latest
   { path: 'top', component: StoryListComponent, data: {type: 'top'} },  // top
   { path: 'best', component: StoryListComponent, data: {type: 'best'} }, // best
+  { path: 'item', component: StoryItemComponent }, 
 ];
 
 @NgModule({
