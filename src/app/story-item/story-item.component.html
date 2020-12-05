@@ -9,7 +9,5 @@
 <input type="submit" value="add comment">
 
 <ul>
-  <li *ngFor="let commentId of story?.kids">
-    <app-comment [id]="commentId"></app-comment>
-  </li>
+  <app-comment *ngFor="let commentId of story?.kids" [id]="commentId"></app-comment>
 </ul>

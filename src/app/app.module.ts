@@ -15,7 +15,7 @@ import { CommentComponent } from './comment/comment.component';
     StoryListComponent,
     StoryListItemComponent,
     StoryItemComponent,
-    CommentComponent
+    CommentComponent,
   ],
   imports: [
     BrowserModule,

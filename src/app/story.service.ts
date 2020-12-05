@@ -15,9 +15,6 @@ export class StoryService {
   }
 
   getItem(id: string) {
-    console.log('getItem');
-    console.log(`https://hacker-news.firebaseio.com/v0/item/${id}.json`);
-    
     return this.http.get<Item>(`https://hacker-news.firebaseio.com/v0/item/${id}.json`);
   }
 }

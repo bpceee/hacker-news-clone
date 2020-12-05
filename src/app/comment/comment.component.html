@@ -1,1 +1,10 @@
-<p>comment works!</p>
+<li class="container">
+  <div class="comhead">{{item?.by}} {{item?.time}}</div>
+    <span class="commtext" [innerHtml]="item?.text"></span>
+    <div>
+      <a class="reply">reply</a>
+    </div>
+</li>
+<ul>
+  <app-comment *ngFor="let commentId of item?.kids" [id]="commentId"></app-comment>
+</ul>
