@@ -2,6 +2,7 @@
   <a [href]="story?.url">{{story?.title}}</a>
   <div>
     <span>{{story?.score}} by {{story?.by}} {{story?.time}} | </span>
-    <a >{{story?.descendants}} comments</a>
+    <!-- TODO: show discuss if no comments -->
+    <a [routerLink]="['/item']" [queryParams]="{id: story?.id}">{{story?.descendants}} comments</a>
   </div>
 </li>

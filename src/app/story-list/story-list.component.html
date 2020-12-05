@@ -1,4 +1,6 @@
 <!-- TODO: paging -->
-<ul class="shipping-item" *ngFor="let story of stories | async | slice:0:4"> 
-  <app-story-list-item [id]="story"></app-story-list-item>
+<ul>
+  <li *ngFor="let story of stories | async | slice:0:4"> 
+    <app-story-list-item [id]="story"></app-story-list-item>
+  </li>
 </ul>

@@ -18,7 +18,6 @@ export class StoryListItemComponent implements OnInit {
     this.storyService.getItem(this.id).subscribe((data)=>{
       this.story = data
     })
-    
   }
 
 }
