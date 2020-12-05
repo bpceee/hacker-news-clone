@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { StoryListItemComponent } from './story-list-item/story-list-item.component';
 import { StoryItemComponent } from './story-item/story-item.component';
 import { CommentComponent } from './comment/comment.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { CommentComponent } from './comment/comment.component';
     StoryListItemComponent,
     StoryItemComponent,
     CommentComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
