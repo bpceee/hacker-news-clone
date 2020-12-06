@@ -5,3 +5,8 @@
 ul {
   padding-left: 28px;
 }
+@media only screen and (max-width: 750px) and (min-width: 300px) {
+  textarea {
+    width: 90%;
+  }
+}

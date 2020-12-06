@@ -24,3 +24,8 @@
   color: #828282;
   background: transparent;
 }
+
+a.comment-link {
+  text-decoration: none;
+  color: inherit;
+}

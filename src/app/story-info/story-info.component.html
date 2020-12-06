@@ -2,7 +2,8 @@
 <span class="hostname" *ngIf="hostname">({{hostname}})</span>
 <div class="subtext">
   <!-- TODO: handle single/plural case for points -->
-  {{item.score}} points by {{item.by}} {{item.time | dateAgo}} | 
+  <span>{{item.score}} points by {{item.by}} {{item.time | dateAgo}} | </span>
+  <a *ngIf="item.parent" [routerLink]="['/item']" [queryParams]="{id: item.parent}">parent | </a>
   <!-- TODO: show discuss if no comments -->
   <a [routerLink]="['/item']" [queryParams]="{id: item.id}">{{item.descendants}} comments</a>
 </div>

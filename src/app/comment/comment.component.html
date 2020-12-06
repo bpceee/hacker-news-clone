@@ -1,7 +1,8 @@
 <ng-container class="container" *ngIf="item$ | async as item">
   <li class="container">
     <div class="comhead">
-      <span>{{item.by}} {{item.time | dateAgo}}</span>
+      <span>{{item.by}} </span>
+      <a class="comment-link" [routerLink]="['/item']" [queryParams]="{id: item.id}">{{item.time | dateAgo}}</a>
       <button class="toggle-btn" (click)="onClickToggleFold()">{{toggleButtonText}}</button>
     </div>
     <ng-container *ngIf="!isFolded">

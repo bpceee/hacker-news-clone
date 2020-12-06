@@ -7,7 +7,7 @@ export type Item = {
   time?: number // Creation date of the item, in Unix Time.
   text: string // The comment, story or poll text. HTML.
   dead?: boolean //	true if the item is dead.
-  parent: number // The comment's parent: either another comment or the relevant story.
+  parent?: number // The comment's parent: either another comment or the relevant story.
   // poll	The pollopt's associated poll.
   kids: number[] // The ids of the item's comments, in ranked display order.
   url?: string // The URL of the story.
