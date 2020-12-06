@@ -1,5 +1,3 @@
-a {
-  text-decoration:none; 
+li {
+  margin-bottom: 5px;
 }
-a:link    { color:#000000; }
-a:visited { color:#828282;}

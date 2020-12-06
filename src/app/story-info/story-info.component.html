@@ -1,0 +1,7 @@
+<a class="title" [href]="item.url">{{item.title}}</a>
+<div class="subtext">
+  <!-- TODO: handle single/plural case for points -->
+  {{item.score}} points by {{item.by}} {{item.time}} | 
+  <!-- TODO: show discuss if no comments -->
+  <a [routerLink]="['/item']" [queryParams]="{id: item.id}">{{item.descendants}} comments</a>
+</div>

@@ -3,3 +3,8 @@
 }
 .more:link    { color:#000000; text-decoration:none; }
 .more:visited { color:#828282; text-decoration:none; }
+
+ol {
+  font-size: 10pt;
+  color: #828282;
+}

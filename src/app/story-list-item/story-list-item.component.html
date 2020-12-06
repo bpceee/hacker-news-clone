@@ -1,8 +1,3 @@
 <li *ngIf="item$ | async as item">
-  <a [href]="item.url">{{item.title}}</a>
-  <div>
-    <span>{{item.score}} by {{item.by}} {{item.time}} | </span>
-    <!-- TODO: show discuss if no comments -->
-    <a [routerLink]="['/item']" [queryParams]="{id: item.id}">{{item.descendants}} comments</a>
-  </div>
+  <app-story-info [item]="item"></app-story-info>
 </li>
