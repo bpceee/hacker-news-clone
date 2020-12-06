@@ -7,12 +7,13 @@ import { Item } from '../types/item'
   templateUrl: './story-info.component.html',
   styleUrls: ['./story-info.component.css']
 })
-export class StoryInfoComponent implements OnInit {
+export class StoryInfoComponent {
   @Input() item: Item;
 
   constructor() { }
 
-  ngOnInit(): void {
+  get hostname() {
+    return this.item.url && new URL(this.item.url).hostname
   }
 
 }

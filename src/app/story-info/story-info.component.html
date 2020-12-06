@@ -1,4 +1,5 @@
 <a class="title" [href]="item.url">{{item.title}}</a>
+<span class="hostname" *ngIf="hostname">({{hostname}})</span>
 <div class="subtext">
   <!-- TODO: handle single/plural case for points -->
   {{item.score}} points by {{item.by}} {{item.time | dateAgo}} | 
