@@ -10,6 +10,7 @@ import { StoryItemComponent } from './story-item/story-item.component';
 import { CommentComponent } from './comment/comment.component';
 import { HeaderComponent } from './header/header.component';
 import { StoryInfoComponent } from './story-info/story-info.component';
+import { DateAgoPipe } from './date-ago.pipe';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { StoryInfoComponent } from './story-info/story-info.component';
     StoryItemComponent,
     CommentComponent,
     HeaderComponent,
+    DateAgoPipe,
   ],
   imports: [
     BrowserModule,

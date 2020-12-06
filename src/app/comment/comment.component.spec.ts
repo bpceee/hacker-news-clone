@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { of } from 'rxjs';
 
+import { DateAgoPipe } from '../date-ago.pipe';
 import { StoryService } from '../story.service'
 import { CommentComponent } from './comment.component';
 
@@ -20,12 +21,11 @@ describe('CommentComponent', () => {
           parent: 25316198,
           text: isRoot?"root comment":"child comment",
           time: 1607188816,
-          type: "comment",
         })
       }
     }
     await TestBed.configureTestingModule({
-      declarations: [ CommentComponent ],
+      declarations: [ CommentComponent, DateAgoPipe ],
       providers: [ { provide: StoryService, useValue: storyServiceStub } ],
     })
     .compileComponents();

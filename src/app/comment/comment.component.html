@@ -1,7 +1,7 @@
 <ng-container class="container" *ngIf="item$ | async as item">
   <li class="container">
     <div class="comhead">
-      <span>{{item.by}} {{item.time}}</span>
+      <span>{{item.by}} {{item.time | dateAgo}}</span>
       <button class="toggle-btn" (click)="onClickToggleFold()">{{toggleButtonText}}</button>
     </div>
     <ng-container *ngIf="!isFolded">

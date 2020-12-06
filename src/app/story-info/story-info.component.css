@@ -1,15 +1,17 @@
 a {
   text-decoration:none; 
 }
-a:link    { color:#000000; }
-a:visited { color:#828282;}
+.title:link    { color:#000000; }
+.title:visited { color:#828282;}
 
 .title {
   font-size: 10pt;
-  padding-bottom: 3px;
 }
 
 .subtext {
+  margin-top: 3px;
   font-size: 7pt;
   color: #828282;
 }
+.subtext a:link    { color:#828282; }
+.subtext a:visited { color: #828282; }
